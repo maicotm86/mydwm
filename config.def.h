@@ -43,10 +43,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,          1,            1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,     0,            0,           -1 },
 	{ "Yad",      NULL,       NULL,       0,          1,            1,           -1 },
-    { "Steam",    NULL,       NULL,       1 << 3,     1,            1,           -1 },
-    { "l2.exe",   NULL,       NULL,       1 << 8,     1,            1,           -1 },
-    { "Wine",     NULL,       NULL,       1 << 8,     1,            1,           -1 },
-    { "pathofexile_x64steam.exe", NULL, NULL, 1 << 7, 1, 1, -1 }
+	{ "Steam",    NULL,       NULL,       1 << 3,     1,            1,           -1 }
 };
 
 /* layout(s) */
@@ -75,6 +72,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+/* static const char *termcmd[]  = { "st", NULL }; */
 static const char *termcmd[]  = { "terminator", NULL };
 
 static Key keys[] = {
