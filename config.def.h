@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask   iscentred     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,          1,            1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,     0,            0,           -1 },
+	{ "Brave-browser",  NULL,       NULL,       1 << 1,     0,            0,           -1 },
 	{ "Yad",      NULL,       NULL,       0,          1,            1,           -1 },
 	{ "Steam",    NULL,       NULL,       1 << 3,     1,            1,           -1 }
 };
@@ -79,6 +80,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("$BROWSER") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
